@@ -1,0 +1,16 @@
+Package: BeTidy
+Title: Quizes and Excercises for Tidyverse Packages
+Version: 0.0.0.9000
+Authors@R: 
+    person(given = "Sergio",
+           family = "Gelves",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: BeTidy provides quizes and exercises to help you jog your memory 
+  with the tidyverse packages.
+License: MIT + file LICENSE
+Encoding: UTF-8
+LazyData: true
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.1.1
