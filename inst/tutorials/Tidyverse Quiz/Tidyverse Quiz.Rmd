@@ -19,8 +19,6 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Tibble
 
-### Quiz
-
 ```{r quiz, echo=FALSE}
 quiz(
   question("Which function should I use to transpose a tibble and be able to see all its columns?",
@@ -76,8 +74,5 @@ quiz(
 
 ## Readr
 
-### Quiz
-
 ## Dplyr
 
-### Quiz
