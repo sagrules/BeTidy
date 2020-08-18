@@ -1,0 +1,196 @@
+---
+title: "Tidyverse Exercises"
+tutorial:
+  id: "com.sagrsoft.tutorials.tidyverseex"
+  version: 0.01
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+description: Practice tidyverse exercises to jog your memory.
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+library(tidyverse)
+
+che <- function(
+  label,
+  user_code,
+  solution_code,
+  check_code,
+  envir_result,
+  evaluate_result,
+  envir_prep,
+  ...
+) {
+  if (trimws(user_code) == trimws(solution_code)) {
+    list(message = "Great Job!", correct = TRUE, location = "append")  
+  }
+  else {
+    list(message = "Incorrect Answer!", correct = FALSE, location = "append")
+  }
+}
+
+knitr::opts_chunk$set(echo = FALSE, exercise.checker = che)
+
+iris <- tibble(iris)
+```
+
+
+## Tibble
+
+For the following exercises we're going to use the iris data set that comes with R. It was changed from data frame to tibble with the code: 
+`iris <- tibble(iris)`.  All work done in exercises don't save the changes made to the iris data set from exercise to exercise.
+
+### Exercise 1/7
+
+Write the R code required to see the iris tibble transposed (used for seeing all column names in tibble when you have a lot):
+
+```{r glimpse, exercise=TRUE}
+
+```
+
+```{r glimpse-solution}
+glimpse(iris)
+```
+
+```{r glimpse-check}
+TRUE
+```
+
+### Exercise 2/7
+
+Write the R code required to add a column of 1's named Height after column Sepal.Width using the pipe operator.
+
+```{r addcol, exercise=TRUE}
+
+```
+
+```{r addcol-solution}
+iris %>% 
+  add_column(Height = 1, .after = "Sepal.Width")
+```
+
+```{r addcol-check}
+TRUE
+```
+
+### Exercise 3/7
+
+Write the R code required to add a row in position 2 with Sepal.Length = 2, Sepal.Width = 1, Species = as_factor("setosa") and the rest of the unspecified columns equal NA. 
+
+```{r addrow, exercise=TRUE}
+
+```
+
+```{r addrow-solution}
+iris %>% 
+  add_row(Sepal.Width = 1, Sepal.Length = 2, Species = as_factor("setosa"), .before = 2)
+```
+
+```{r addrow-check}
+TRUE
+```
+
+### Exercise 4/7
+
+From an unnamed atomic vector with values from 1 to 10 create a tibble with only one column named "Numbers" with these values. 
+
+```{r enframe1, exercise=TRUE}
+
+```
+
+```{r enframe1-solution}
+enframe(x = 1:10, name = NULL, value = "Numbers")
+```
+
+```{r enframe1-check}
+TRUE
+```
+
+### Exercise 5/7
+
+From a named atomic vector with values from 1 to 3 and names from a to c create a tibble with two columns named "Names" and "Numbers" with these values. 
+
+```{r enframe2, exercise=TRUE}
+
+```
+
+```{r enframe2-solution}
+enframe(x = c(a = 1, b = 2, c = 3), name = "Names", value = "Numbers")
+```
+
+```{r enframe2-check}
+TRUE
+```
+
+### Exercise 6/7
+
+From the following tibble named pop change it to a named vector.
+
+```{r deframet}
+(pop <- tibble(city = c("San Francisco", "Los Angeles", "New York"),
+              population = c(900022, 4040000, 8700000)))
+```
+
+```{r deframe, exercise=TRUE}
+
+```
+
+```{r deframe-solution}
+deframe(pop)
+```
+
+```{r deframe-check}
+TRUE
+```
+
+### Exercise 7/7
+
+Create a tibble from a row-by-row layout.  Column names should be "Letters" and "Numbers".  First row has values "a", 1; second row has values "b", 2; third row has values "c", 3.
+
+```{r tribble, exercise=TRUE}
+
+```
+
+```{r tribble-solution}
+tribble(~Letters, ~Numbers,
+        "a",   1,
+        "b",   2,
+        "c",   3)
+```
+
+```{r tribble-check}
+TRUE
+```
+
+## Readr
+
+### Quiz
+
+*You can include any number of single or multiple choice questions as a quiz. Use the `question` function to define a question and the `quiz` function for grouping multiple questions together.*
+
+Some questions to verify that you understand the purposes of various base and recommended R packages:
+
+```{r quiz}
+quiz(
+  question("Which package contains functions for installing other R packages?",
+    answer("base"),
+    answer("tools"),
+    answer("utils", correct = TRUE),
+    answer("codetools")
+  ),
+  question("Which of the R packages listed below are used to create plots?",
+    answer("lattice", correct = TRUE),
+    answer("tools"),
+    answer("stats"),
+    answer("grid", correct = TRUE)
+  )
+)
+```
+
+## Dplyr
+
+### Exercise

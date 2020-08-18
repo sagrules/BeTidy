@@ -1,0 +1,76 @@
+---
+title: "Tidyverse Quiz"
+tutorial:
+  id: "com.sagrsoft.tutorials.tidyversequiz"
+  version: 0.01
+output: 
+  learnr::tutorial:
+    progressive: true
+    allow_skip: true
+runtime: shiny_prerendered
+description: Tidyverse quiz to refresh memory.
+---
+
+```{r setup, include=FALSE}
+library(learnr)
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+## Tibble
+
+### Quiz
+
+```{r quiz, echo=FALSE}
+quiz(
+  question("Which function should I use to transpose a tibble and be able to see all its columns?",
+    answer("glimpse", correct = TRUE),
+    answer("View"),
+    answer("glance"),
+    answer("peek"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which function should I use to add a column to a tibble?",
+    answer("add_column", correct = TRUE),
+    answer("add.column"),
+    answer("add_echelon"),
+    answer("addColumn"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which function should I use to add a row to a tibble?",
+    answer("add_row", correct = TRUE),
+    answer("add.row"),
+    answer("add_echelon"),
+    answer("addRow"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which function should I use to transform a vector into a tibble?",
+    answer("enframe", correct = TRUE),
+    answer("make_tibble"),
+    answer("create_tibble"),
+    answer("fabricate_tibble"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which function should I use to transform a tibble with one or two columns into a vector?",
+    answer("deframe", correct = TRUE),
+    answer("make_vector"),
+    answer("create_vector"),
+    answer("fabricate_vector"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which function should I use to create a tibble from data in row-by-row layout?",
+    answer("tribble", correct = TRUE),
+    answer("make_tibble"),
+    answer("tibble"),
+    answer("create_tibble"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  )
+)
+```
+
