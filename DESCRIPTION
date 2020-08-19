@@ -1,6 +1,6 @@
 Package: BeTidy
 Title: Quizes and Excercises for Tidyverse Packages
-Version: 0.0.1.2000
+Version: 0.0.1.3000
 Authors@R: 
     person(given = "Sergio",
            family = "Gelves",
