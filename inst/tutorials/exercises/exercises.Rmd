@@ -189,6 +189,38 @@ TRUE
 
 ### Exercise
 
+Read from file the population csv file and save it into variable pop_csv, surround with parenthesis so that it prints. Read the Region column (1st) as factor and the Number column (2nd) as double, last column should be skipped. Use the abbreviation to specify column types.
+
+```{r read_csv2, exercise=TRUE}
+
+```
+
+```{r read_csv2-solution}
+(pop_csv <- read_csv(example_csv_path(), col_types = "fd_"))
+```
+
+```{r read_csv2-check}
+TRUE
+```
+
+### Exercise
+
+Read from file the population csv file and save it in variable popm as a melted tibble with one row for each token. Surround in parenthesis so that it prints.
+
+```{r melt_csv, exercise=TRUE}
+
+```
+
+```{r melt_csv-solution}
+(popm_csv <- melt_csv(example_csv_path()))
+```
+
+```{r melt_csv-check}
+TRUE
+```
+
+### Exercise
+
 Read from file the population tsv file and save it into variable pop_tsv, surround with parenthesis so that it prints.
 
 ```{r read_tsv, exercise=TRUE}
