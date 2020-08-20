@@ -2,7 +2,6 @@
 title: "Tidyverse Quiz"
 tutorial:
   id: "com.sagrsoft.tutorials.tidyversequiz"
-  version: 0.01
 output: 
   learnr::tutorial:
     progressive: true
@@ -19,9 +18,9 @@ knitr::opts_chunk$set(echo = FALSE)
 
 ## Tibble
 
-```{r quiz, echo=FALSE}
+```{r quiz_tibble, echo=FALSE}
 quiz(
-  question("Which function should I use to transpose a tibble and be able to see all its columns?",
+  question("Which function should you use to transpose a tibble and be able to see all its columns?",
     answer("glimpse", correct = TRUE),
     answer("View"),
     answer("glance"),
@@ -29,7 +28,7 @@ quiz(
     allow_retry = TRUE,
     random_answer_order = TRUE
   ),
-  question("Which function should I use to add a column to a tibble?",
+  question("Which function should you use to add a column to a tibble?",
     answer("add_column", correct = TRUE),
     answer("add.column"),
     answer("add_echelon"),
@@ -37,7 +36,7 @@ quiz(
     allow_retry = TRUE,
     random_answer_order = TRUE
   ),
-  question("Which function should I use to add a row to a tibble?",
+  question("Which function should you use to add a row to a tibble?",
     answer("add_row", correct = TRUE),
     answer("add.row"),
     answer("add_echelon"),
@@ -45,7 +44,7 @@ quiz(
     allow_retry = TRUE,
     random_answer_order = TRUE
   ),
-  question("Which function should I use to transform a vector into a tibble?",
+  question("Which function should you use to transform a vector into a tibble?",
     answer("enframe", correct = TRUE),
     answer("make_tibble"),
     answer("create_tibble"),
@@ -53,7 +52,7 @@ quiz(
     allow_retry = TRUE,
     random_answer_order = TRUE
   ),
-  question("Which function should I use to transform a tibble with one or two columns into a vector?",
+  question("Which function should you use to transform a tibble with one or two columns into a vector?",
     answer("deframe", correct = TRUE),
     answer("make_vector"),
     answer("create_vector"),
@@ -61,7 +60,7 @@ quiz(
     allow_retry = TRUE,
     random_answer_order = TRUE
   ),
-  question("Which function should I use to create a tibble from data in row-by-row layout?",
+  question("Which function should you use to create a tibble from data in row-by-row layout?",
     answer("tribble", correct = TRUE),
     answer("make_tibble"),
     answer("tibble"),
@@ -73,6 +72,77 @@ quiz(
 ```
 
 ## Readr
+
+```{r quiz_readr, echo=FALSE}
+quiz(
+  question("What is the name of the function that loads a comma separated values (csv) file and stores it in a tibble?",
+    answer("read_csv", correct = TRUE),
+    answer("read.csv"),
+    answer("load_csv"),
+    answer("make_tibble_from_csv"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that loads a delimited file and stores it in a tibble?",
+    answer("read_delim", correct = TRUE),
+    answer("read.delim"),
+    answer("load_delim"),
+    answer("make_tibble_from_delim"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that loads a file and stores it in a list of lines?",
+    answer("read_lines", correct = TRUE),
+    answer("read.lines"),
+    answer("load_lines"),
+    answer("read_file"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that makes a tibble with a row for each token in a csv file?",
+    answer("melt_csv", correct = TRUE),
+    answer("dissolve_csv"),
+    answer("disintegrate_csv"),
+    answer("fade_csv"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that returns the column specification for a tibble?",
+    answer("spec", correct = TRUE),
+    answer("specification"),
+    answer("specif"),
+    answer("col_spec"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that writes a csv file from a tibble?",
+    answer("write_csv", correct = TRUE),
+    answer("write.csv"),
+    answer("tibble_to_csv"),
+    answer("compose_csv"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that writes a list of lines to a file?",
+    answer("write_lines", correct = TRUE),
+    answer("write.lines"),
+    answer("compose_lines"),
+    answer("save_lines"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What are all the types of files readr can handle?",
+    answer("comma separated values (csv), tab separated values (tsv), delimited, fixed width file.", correct = TRUE),
+    answer("comma separated values (csv), tab separated values (tsv), delimited"),
+    answer("comma separated values (csv), tab separated values (tsv)"),
+    answer("tables"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  )
+)
+
+```
+
 
 ## Dplyr
 

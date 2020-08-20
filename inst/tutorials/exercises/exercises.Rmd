@@ -2,7 +2,6 @@
 title: "Tidyverse Exercises"
 tutorial:
   id: "com.sagrsoft.tutorials.tidyverseex"
-  version: 0.01
 output: 
   learnr::tutorial:
     progressive: true
@@ -14,6 +13,7 @@ description: Practice tidyverse exercises to jog your memory.
 ```{r setup, include=FALSE}
 library(learnr)
 library(tidyverse)
+library(BeTidy)
 
 che <- function(
   label,
@@ -168,7 +168,72 @@ TRUE
 
 ## Readr
 
+For the following exercises we will be using an example population dataset.  You can use the helper functions included with BeTidy to get the path of each type of file. For example you can retrieve the path of the csv file with the function
+example_csv_path().
+
 ### Exercise
+
+Read from file the population csv file and save it into variable pop_csv, surround with parenthesis so that it prints.
+
+```{r read_csv, exercise=TRUE}
+
+```
+
+```{r read_csv-solution}
+(pop_csv <- read_csv(example_csv_path()))
+```
+
+```{r read_csv-check}
+TRUE
+```
+
+### Exercise
+
+Read from file the population tsv file and save it into variable pop_tsv, surround with parenthesis so that it prints.
+
+```{r read_tsv, exercise=TRUE}
+
+```
+
+```{r read_tsv-solution}
+(pop_tsv <- read_tsv(example_tsv_path()))
+```
+
+```{r read_tsv-check}
+TRUE
+```
+
+### Exercise
+
+Read from file the population delimited file and save it into variable pop_delim, surround with parenthesis so that it prints.  The file is delimited with ";".
+
+```{r read_delim, exercise=TRUE}
+
+```
+
+```{r read_delim-solution}
+(pop_delim <- read_delim(example_delim_path(), delim = ";"))
+```
+
+```{r read_delim-check}
+TRUE
+```
+
+### Exercise
+
+Read from file the population csv file and save it as a list of lines into variable pop_lines, surround with parenthesis so that it prints.  
+
+```{r read_lines, exercise=TRUE}
+
+```
+
+```{r read_lines-solution}
+(pop_lines <- read_lines(example_csv_path()))
+```
+
+```{r read_lines-check}
+TRUE
+```
 
 ## Dplyr
 
