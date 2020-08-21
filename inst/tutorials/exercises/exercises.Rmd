@@ -171,7 +171,7 @@ TRUE
 For the following exercises we will be using an example population dataset.  You can use the helper functions included with BeTidy to get the path of each type of file. For example you can retrieve the path of the csv file with the function
 example_csv_path().
 
-### Exercise
+### Exercise 1/6
 
 Read from file the population csv file and save it into variable pop_csv, surround with parenthesis so that it prints.
 
@@ -187,7 +187,7 @@ Read from file the population csv file and save it into variable pop_csv, surrou
 TRUE
 ```
 
-### Exercise
+### Exercise 2/6
 
 Read from file the population csv file and save it into variable pop_csv, surround with parenthesis so that it prints. Read the Region column (1st) as factor and the Number column (2nd) as double, last column should be skipped. Use the abbreviation to specify column types.
 
@@ -203,7 +203,7 @@ Read from file the population csv file and save it into variable pop_csv, surrou
 TRUE
 ```
 
-### Exercise
+### Exercise 3/6
 
 Read from file the population csv file and save it in variable popm as a melted tibble with one row for each token. Surround in parenthesis so that it prints.
 
@@ -219,7 +219,7 @@ Read from file the population csv file and save it in variable popm as a melted 
 TRUE
 ```
 
-### Exercise
+### Exercise 4/6
 
 Read from file the population tsv file and save it into variable pop_tsv, surround with parenthesis so that it prints.
 
@@ -235,7 +235,7 @@ Read from file the population tsv file and save it into variable pop_tsv, surrou
 TRUE
 ```
 
-### Exercise
+### Exercise 5/6
 
 Read from file the population delimited file and save it into variable pop_delim, surround with parenthesis so that it prints.  The file is delimited with ";".
 
@@ -251,7 +251,7 @@ Read from file the population delimited file and save it into variable pop_delim
 TRUE
 ```
 
-### Exercise
+### Exercise 6/6
 
 Read from file the population csv file and save it as a list of lines into variable pop_lines, surround with parenthesis so that it prints.  
 
@@ -266,6 +266,8 @@ Read from file the population csv file and save it as a list of lines into varia
 ```{r read_lines-check}
 TRUE
 ```
+
+From a tibble, you can create the different types of files with functions write_csv(), write_tsv(), write_delim(), write_lines(). There aren't example exercises so as to not pollute your workspace.
 
 ## Dplyr
 
