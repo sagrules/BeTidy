@@ -15,25 +15,7 @@ library(learnr)
 library(tidyverse)
 library(BeTidy)
 
-che <- function(
-  label,
-  user_code,
-  solution_code,
-  check_code,
-  envir_result,
-  evaluate_result,
-  envir_prep,
-  ...
-) {
-  if (trimws(user_code) == trimws(solution_code)) {
-    list(message = "Great Job!", correct = TRUE, location = "append")  
-  }
-  else {
-    list(message = "Incorrect Answer!", correct = FALSE, location = "append")
-  }
-}
-
-knitr::opts_chunk$set(echo = FALSE, exercise.checker = che)
+knitr::opts_chunk$set(echo = FALSE, exercise.checker = check_result_f)
 
 iris <- tibble(iris)
 ```
@@ -64,7 +46,7 @@ TRUE
 
 Write the R code required to add a column of 1's named Height after column Sepal.Width using the pipe operator.
 
-```{r addcol, exercise=TRUE}
+```{r addcol, exercise=TRUE, exercise.checker=check_code_f}
 
 ```
 
@@ -151,7 +133,7 @@ TRUE
 
 Create a tibble from a row-by-row layout.  Column names should be "Letters" and "Numbers".  First row has values "a", 1; second row has values "b", 2; third row has values "c", 3.
 
-```{r tribble, exercise=TRUE}
+```{r tribble, exercise=TRUE, exercise.checker=check_code_f}
 
 ```
 
