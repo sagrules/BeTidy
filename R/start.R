@@ -2,11 +2,11 @@
 #'
 #' @import learnr
 #'
-#' @return
+#' @return tutorial
 #' @export
 #'
 #' @examples
-#' start_quiz()
+#' print("start_quiz()")
 start_quiz <- function() {
   learnr::run_tutorial("quizzes", "BeTidy")
 }
@@ -15,11 +15,11 @@ start_quiz <- function() {
 #'
 #' @import learnr
 #'
-#' @return
+#' @return tutorial
 #' @export
 #'
 #' @examples
-#' start_exercise()
+#' print("start_exercise()")
 start_exercise <- function() {
   learnr::run_tutorial("exercises", "BeTidy")
 }

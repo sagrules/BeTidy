@@ -146,3 +146,71 @@ quiz(
 
 ## Dplyr
 
+```{r quiz_dplyr, echo=FALSE}
+quiz(
+  question("What is the name of the function that applies a function to a set of columns inside dplyr verbs?",
+    answer("across", correct = TRUE),
+    answer("athwart"),
+    answer("over"),
+    answer("through"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that returns a new tibble with the number of unique values in a variable?",
+    answer("count", correct = TRUE),
+    answer("add_count"),
+    answer("tally"),
+    answer("add_tally"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that returns a new tibble with the number of unique values in a variable after you specifically group_by a variable?",
+    answer("count"),
+    answer("add_count"),
+    answer("tally", correct = TRUE),
+    answer("add_tally"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that adds a new column named n with the number of unique values in a variable?",
+    answer("count"),
+    answer("add_count", correct = TRUE),
+    answer("tally"),
+    answer("add_tally"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What is the name of the function that adds a new column n with the number of unique values in a variable after you specifically group_by a variable?",
+    answer("count"),
+    answer("add_count"),
+    answer("tally"),
+    answer("add_tally", correct = TRUE),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What function filters rows in tibble x with a match in tibble y?",
+    answer("semi_join", correct = TRUE),
+    answer("anti_join"),
+    answer("right_join"),
+    answer("inner_join"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE     
+  ),
+  question("What function filters rows in tibble x without a match in tibble y?",
+    answer("semi_join"),
+    answer("anti_join", correct = TRUE),
+    answer("right_join"),
+    answer("inner_join"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE     
+  ),
+  question("What function sorts a tibble by a column's values?",
+    answer("arrange", correct = TRUE),
+    answer("sort"),
+    answer("order"),
+    answer("assort"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE 
+  )
+)
+```

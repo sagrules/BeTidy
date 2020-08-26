@@ -39,5 +39,5 @@ list with message
 Checks that user code and solution code results are equal.
 }
 \examples{
-check_result_f("ex1", "x <- 5", "x <- 5", "TRUE")
+check_result_f("ex1", "x <- 5", "x <- 5", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE")
 }

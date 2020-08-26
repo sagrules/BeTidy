@@ -13,7 +13,7 @@
 #' @export
 #'
 #' @examples
-#' check_result_f("ex1", "x <- 5", "x <- 5", "TRUE")
+#' check_result_f("ex1", "x <- 5", "x <- 5", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE")
 check_result_f <- function(
   label,
   user_code,
@@ -50,7 +50,7 @@ check_result_f <- function(
 #' @export
 #'
 #' @examples
-#' check_code_f("ex1", "x <- 5", "x <- 5", "TRUE")
+#' check_code_f("ex1", "x <- 5", "x <- 5", "TRUE", "TRUE", "TRUE", "TRUE", "TRUE")
 check_code_f <- function(
   label,
   user_code,

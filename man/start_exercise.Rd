@@ -7,11 +7,11 @@
 start_exercise()
 }
 \value{
-
+tutorial
 }
 \description{
 Starts BeTidy Exercises
 }
 \examples{
-start_exercise()
+print("start_exercise()")
 }

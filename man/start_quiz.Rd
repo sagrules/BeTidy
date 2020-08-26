@@ -7,11 +7,11 @@
 start_quiz()
 }
 \value{
-
+tutorial
 }
 \description{
 Starts BeTidy Quizzes
 }
 \examples{
-start_quiz()
+print("start_quiz()")
 }
