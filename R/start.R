@@ -6,7 +6,9 @@
 #' @export
 #'
 #' @examples
-#' print("start_quiz()")
+#' \dontrun{
+#' start_quiz()
+#' }
 start_quiz <- function() {
   learnr::run_tutorial("quizzes", "BeTidy")
 }
@@ -19,7 +21,9 @@ start_quiz <- function() {
 #' @export
 #'
 #' @examples
-#' print("start_exercise()")
+#' \dontrun{
+#' start_exercise()
+#' }
 start_exercise <- function() {
   learnr::run_tutorial("exercises", "BeTidy")
 }

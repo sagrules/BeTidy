@@ -13,5 +13,7 @@ tutorial
 Starts BeTidy Exercises
 }
 \examples{
-print("start_exercise()")
+\dontrun{
+start_exercise()
+}
 }

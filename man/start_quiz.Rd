@@ -13,5 +13,7 @@ tutorial
 Starts BeTidy Quizzes
 }
 \examples{
-print("start_quiz()")
+\dontrun{
+start_quiz()
+}
 }
