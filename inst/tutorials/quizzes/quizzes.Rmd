@@ -275,6 +275,70 @@ quiz(
     answer("cum_any"), 
     allow_retry = TRUE,
     random_answer_order = TRUE
-  )
+  ),
+  question("Which ranking function ranks a vector, giving the lower rank in ties to the value that appears first?",
+    answer("row_number", correct = TRUE),
+    answer("min_rank"),
+    answer("dense_rank"),
+    answer("percent_rank"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which ranking function ranks a vector, giving the min rank to all ties?",
+    answer("cume_dist"),
+    answer("min_rank", correct = TRUE),
+    answer("dense_rank"),
+    answer("percent_rank"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which ranking function ranks a vector, giving the min rank to all ties and with no gaps between ranks?",
+    answer("dense_rank", correct = TRUE),
+    answer("min_rank"),
+    answer("cume_dist"),
+    answer("percent_rank"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which ranking function ranks a vector, giving the min rank to all ties and scaled between [0, 1]?",
+    answer("percent_rank", correct = TRUE),
+    answer("min_rank"),
+    answer("cume_dist"),
+    answer("ntile"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which ranking function ranks a vector with the proportion of values less than or equal to the current rank?",
+    answer("cume_dist", correct = TRUE),
+    answer("min_rank"),
+    answer("ntile"),
+    answer("percent_rank"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("Which ranking function ranks a vector by breaking it into buckets?",
+    answer("ntile", correct = TRUE),
+    answer("min_rank"),
+    answer("cume_dist"),
+    answer("percent_rank"), 
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What function selects unique rows from a tibble?",
+    answer("unique"),
+    answer("distinct", correct = TRUE),
+    answer("singular"),
+    answer("idiomatic"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ),
+  question("What function subsets rows using column values?",
+    answer("filter", correct = TRUE),
+    answer("screen"),
+    answer("strain"),
+    answer("percolate"),
+    allow_retry = TRUE,
+    random_answer_order = TRUE
+  ) 
 )
 ```
